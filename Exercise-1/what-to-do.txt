@@ -1,0 +1,28 @@
+####################################################################################################
+This file will detail what you need to do within this exercise. It isn't extremely long, but will
+hopefully touch on useful aspects of bash and the linux shell, before we move onto interacting with 
+bash via scripting. 
+
+This tutorial will introduce a number of different commands and a brief description of what they do.
+Some of them will be useful, others you may not touch again within your projects. You can always find
+out further detail about these commands with a simple google search. 
+
+We will start off with some basics, and then move onto some more involved ways to interact with the 
+shell. 
+####################################################################################################
+
+1. Create a file, called example.txt. Open the file using vim and write a few short sentences about your
+project or modules, and move it into a directory called example_dir.
+
+2. Copy example.txt to another file, called copied.txt.
+
+3. Output the contents of the file to the shell using the following commands.
+    a) $ cat copied.txt
+    b) $ head copied.txt 
+You may not have noticed a difference between the above, depending on how long the original file was. 
+    a) will output the entirity of the file.
+    b) will by default output the first 10 lines of the file.
+
+4. Repeat the above, this time we will redirect the output to another file, called piped.txt, we achieve 
+this through the use of `>>`.
+
