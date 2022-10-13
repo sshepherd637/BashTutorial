@@ -1,14 +1,14 @@
-############################################################################################################
-This file will detail what you need to do within this exercise. It's a little more involved than the 
-previous exercise, and will require some thinking and the use of another tool called 'awk'.
-
-Like the previous tutorial, we will introduce a number of new commands and provide a brief description of 
-what they do. You can always find out further detail about these commands with a simple google search. 
-This exercise will act as a bridge between general bash/linux programming and more niche uses for my 
-particular purposes.
-
-As such, we want to end up with a file which we will call 'script.sh'.
-############################################################################################################
+################################################################################################################
+#   This file will detail what you need to do within this exercise. It's a little more involved than the       #
+#   previous exercise, and will require some thinking and the use of another tool called 'awk'.                # 
+#                                                                                                              #
+#   Like the previous tutorial, we will introduce a number of new commands and provide a brief description of  #
+#   what they do. You can always find out further detail about these commands with a simple google search.     #
+#   This exercise will act as a bridge between general bash/linux programming and more niche uses for my       #
+#   particular purposes.                                                                                       #
+#                                                                                                              #
+#   As such, we want to end up with a file which we will call 'script.sh'.                                     #
+################################################################################################################
 
 1. Prior to creating a script to do this task, we are going to run this all through the command line so 
 as to get an idea of what we are actually asking the script to do. The following steps will take us through

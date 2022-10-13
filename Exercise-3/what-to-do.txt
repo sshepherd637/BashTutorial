@@ -1,16 +1,16 @@
-####################################################################################################
-This file will detail what you need to do within this exercise. It's a little more involved than the 
-previous exercise, and will require some thinking and playing with some other useful tools like gnuplot
-and python, in places. 
-
-Like the previous tutorial, we will introduce a number of new commands and provide a brief description of 
-what they do. You can always find out further detail about these commands with a simple google search. 
-These commands are more along the lines of commands I use quite a lot and find useful to avoid having to 
-create niche python scripts.
-
-We will start off quite basic, writing our own script to parse out some useful information from an output
-file using awk, then use it to plot a graph of our data (using either gnuplot or python)
-####################################################################################################
+##################################################################################################################
+#   This file will detail what you need to do within this exercise. It's a little more involved than the         #
+#   previous exercise, and will require some thinking and playing with some other useful tools like gnuplot      #
+#   and python, in places.                                                                                       #
+#                                                                                                                #
+#   Like the previous tutorial, we will introduce a number of new commands and provide a brief description of    #
+#   what they do. You can always find out further detail about these commands with a simple google search.       #
+#   These commands are more along the lines of commands I use quite a lot and find useful to avoid having to     #
+#   create niche python scripts.                                                                                 #
+#                                                                                                                #
+#   We will start off quite basic, writing our own script to parse out some useful information from an output    #
+#   file using awk, then use it to plot a graph of our data (using either gnuplot or python)                     #
+##################################################################################################################
 
 Similarly to last time, we are going to walk through this first on the CLI and then move towards a script.
 To provide context for what we are doing, take a look at the file in Resources called 'cp2k.out'. How many 
