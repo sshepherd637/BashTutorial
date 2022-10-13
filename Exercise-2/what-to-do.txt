@@ -1,0 +1,31 @@
+############################################################################################################
+This file will detail what you need to do within this exercise. It's a little more involved than the 
+previous exercise, and will require some thinking and the use of another tool called 'awk'.
+
+Like the previous tutorial, we will introduce a number of new commands and provide a brief description of 
+what they do. You can always find out further detail about these commands with a simple google search. 
+This exercise will act as a bridge between general bash/linux programming and more niche uses for my 
+particular purposes.
+
+As such, we want to end up with a file which we will call 'script.sh'.
+############################################################################################################
+
+1. Prior to creating a script to do this task, we are going to run this all through the command line so 
+as to get an idea of what we are actually asking the script to do. The following steps will take us through
+this process. 
+    a) Create 10 directories, named Simulation_1, Simulation_2 and so on, up to Simulation_10.
+    b) Copy the files 'md.lmp', 'run.job', 'input.xml', 'data.lmp' and 'ipi.xyz' into EACH directory.
+    c) Within Simulation_1, edit the following:
+        i) run.job: Change all 'XXX' to the directory name.
+        ii) md.lmp: Change all 'XXX' to the directory name.
+        iii) input.xml: Change all 'XXX' to the directory name, change all 'YYY' to a random number between 
+        1-100000. 
+
+This needs to be completed for all directories that we just created! That's a lot of manual, repititive work 
+that we could avoid doing through the use of bash iteration and scripting!
+
+2) Try 1) again, this time using iteration through the CLI rather than manually for each directory. You will 
+need to use another command we have not encountered yet, 'sed'. I'll detail this whenever we get here.
+
+3) Try 1) again, this time using a bash script, which we will call 'script.sh'.
+

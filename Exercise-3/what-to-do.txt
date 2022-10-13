@@ -1,0 +1,52 @@
+####################################################################################################
+This file will detail what you need to do within this exercise. It's a little more involved than the 
+previous exercise, and will require some thinking and playing with some other useful tools like gnuplot
+and python, in places. 
+
+Like the previous tutorial, we will introduce a number of new commands and provide a brief description of 
+what they do. You can always find out further detail about these commands with a simple google search. 
+These commands are more along the lines of commands I use quite a lot and find useful to avoid having to 
+create niche python scripts.
+
+We will start off quite basic, writing our own script to parse out some useful information from an output
+file using awk, then use it to plot a graph of our data (using either gnuplot or python)
+####################################################################################################
+
+Similarly to last time, we are going to walk through this first on the CLI and then move towards a script.
+To provide context for what we are doing, take a look at the file in Resources called 'cp2k.out'. How many 
+lines are in it? If you thought too many to read over, than you already have the correct motivation to use 
+tools like 'awk' and 'gnuplot'!.
+
+1. First, let's get a grip of using awk. 
+    a) Create a directory called 'awk-example'.
+    b) Copy 'Resources/awk_exercise.txt' into the newly created directory.
+    c) Look at the file, is it regular coloumnar data? Would this file be relatively easy to parse or do you 
+think you need a more involved approach?
+    d) Output all lines of the file APART from the header to the shell. (Many approaches to this!)
+    e) Using awk, write a command that will multiply the 2nd coloumn by 5, and print the rest to an output file
+called 'awk_cli.out'
+    f) Repeat e, this time ensuring the header is not included within the output. 
+
+2. As a way to show your new found mastery over awk. Write a script that will read the example file, and do the 
+following:
+    a) Output a file containing all the data WITHOUT the header line.
+    b) For lines 2 - 6, multiply coloumn 2 by 5.
+    c) For lines 7 - 9, multiply coloumn 2 by 4.
+    d) For the remainder, multiply coloumn 2 by 3. 
+Call the output file 'awk_script.out' 
+
+Moving now to a larger file, we now want to parse the output of 'cp2k.out'. This is quite an involved exercise,
+so don't be afraid to ask questions about different aspects of what you have covered. 
+    
+3. Parse out all of the cell parameters of the input file. To give you a pattern to look for, 'CELL' contains 
+all the lines that I would be looking for within an output. Parse all of these into a file where every line 
+represents the cell parameters at that step of the calculation, called 'cell_parameters.out'. 
+
+Some hints to help along the way:
+    a) You'll need iteration, once over the lengths, and once over the cell angles. Ultimately creating 6 files.
+    b) You'll need to be very particular over variable expansion within the shell, i.e. using '' or "". 
+    c) 'Paste' will give you the final output that you want.
+
+4. If you have access to gnuplot (either locally, or remotely) visualise the data you have just parsed out. 
+
+

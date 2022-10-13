@@ -1,0 +1,30 @@
+#!/bin/bash -l
+#SBATCH --no-requeue
+#SBATCH --get-user-env
+#SBATCH --output=_simulation.out
+#SBATCH --error=_simulation.err
+#SBATCH --nodes=6
+#SBATCH --ntasks=144
+#SBATCH --job-name=300K-D3-PACMD_XXX
+#SBATCH --partition=k2-medpri
+#SBATCH --time 24:00:00
+#SBATCH --mem-per-cpu=4G
+
+# load relevant module required for the MD simulation and add path as needed using 'nnp-md'
+module load libs/gcc/9.3.0 compilers/gcc/9.3.0 mpi/openmpi/4.0.4/gcc-9.3.0+ucx-1.8.0 apps/python3/3.7.9/gcc-10.2.0 && export PATH=$PATH:/mnt/userapps/sams_apps/n2p2/lammps-nnp/src
+
+# remove additional path variables for the socket to use
+rm -r /tmp/ipi_revPBED3-300K-XXX
+ls
+
+# run i-pi and allow to run for 20 seconds
+if [ -f kaolinite.chk ]; then
+	python3 $cdir/i-pi/bin/i-pi kaolinite.chk &> ipi.out & sleep 20
+	else
+	python3 $cdir/i-pi/bin/i-pi input-pacmd.xml &> ipi.out & sleep 20
+fi
+
+# start lammps and allow it to run
+mpirun -np 144 $cdir/n2p2/bin/lmp_mpi < md.lmp &> lmp.out &
+
+wait
